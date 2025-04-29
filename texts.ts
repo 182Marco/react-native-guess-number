@@ -1,5 +1,6 @@
 const texts = {
-  clearBtnText: '',
+  resetBtnText: 'Reset',
+  confirmBtnText: 'Confirm',
 };
 
 export { texts };
