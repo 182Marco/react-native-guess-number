@@ -1,6 +1,7 @@
 const colors: Record<string, string> = {
-  background: '#0F172A',
-  panel: '#1E293B',
+  background: '#4e0329',
+  secondary: '#ddb52f',
+  primaryBtn: '#72063c',
   inputBackground: '#334155',
   inputBorder: '#64748B',
   textColor: '#F1F5F9',
