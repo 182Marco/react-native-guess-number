@@ -13,6 +13,7 @@ interface BtnAtomProps {
   marginRight?: string;
   marginVertical?: string;
   marginHorizontal?: string;
+  rippleColor?: string;
   text: string;
 }
 
