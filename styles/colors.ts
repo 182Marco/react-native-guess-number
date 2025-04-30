@@ -1,3 +1,6 @@
+import { IAndroid_ripple } from './models';
+import { isHexColor } from './utils';
+
 const colors: Record<string, string> = {
   background: '#4e0329',
   secondary: '#ddb52f',
@@ -13,11 +16,11 @@ const colors: Record<string, string> = {
   rippleColor: '#dddddddd',
 };
 
-const android_ripple = {
+const android_ripple: IAndroid_ripple = color => ({
   android_ripple: {
-    color: colors.rippleColor,
+    color: isHexColor(color) || colors.rippleColor,
     borderless: false,
   },
-};
+});
 
 export { colors, android_ripple };
