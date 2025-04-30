@@ -9,7 +9,7 @@ const Btn: IBtn = p => {
       <N.Pressable
         style={S.btnBoxStyle(p)}
         onPress={p.onPress}
-        {...Gs.android_ripple}
+        {...Gs.android_ripple(p.rippleColor)}
       >
         <N.View style={S.btnStyle(p)}>
           <N.Text style={S.btnTextStyle(p)}>{p.text}</N.Text>
