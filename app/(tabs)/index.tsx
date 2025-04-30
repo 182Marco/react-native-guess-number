@@ -1,9 +1,9 @@
 import { AppRegistry, Platform } from 'react-native';
-import { HomeScreen } from '@/components';
+import * as C from '@/components';
 import appConfig from '../../app.json';
 import * as R from 'react';
 
-const Root = () => <HomeScreen />;
+const Root = () => <C.startGameScreen />;
 
 const { name } = appConfig.expo;
 
