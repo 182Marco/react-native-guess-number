@@ -20,12 +20,20 @@ const S = StyleSheet.create({
 const btnBoxStyle = (p: IStyleProps) => ({
   ...S.btnBox,
   backgroundColor: p.BgColor || Gs.colors.buttonColor,
+  borderRadius: Number(p.borderRadius || 10),
+  marginTop: Number(p.marginTop || 0),
+  marginBottom: Number(p.marginBottom || 0),
+  marginLeft: Number(p.marginLeft || 0),
+  marginRight: Number(p.marginRight || 0),
+  marginHorizontal: Number(p.marginHorizontal || 0),
+  marginVertical: Number(p.marginVertical || 0),
 });
 
 const btnStyle = (p: IStyleProps) => ({
   ...S.btn,
   paddingVertical: Number(p.paddingVertical || 10),
   paddingHorizontal: Number(p.paddingHorizontal || 20),
+  elevation: Number(p.paddingVertical) && Number(p.paddingHorizontal) ? 2 : 0,
 });
 
 const btnTextStyle = (p: IStyleProps) => ({
