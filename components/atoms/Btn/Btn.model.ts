@@ -1,12 +1,19 @@
 import { GestureResponderEvent, StyleProp, ViewStyle } from 'react-native';
 
 interface BtnAtomProps {
-  text: string;
-  onPress: (e: GestureResponderEvent) => void;
   BgColor?: string;
+  borderRadius?: string;
   color?: string;
+  onPress: (e: GestureResponderEvent) => void;
   paddingVertical?: string;
   paddingHorizontal?: string;
+  marginTop?: string;
+  marginBottom?: string;
+  marginLeft?: string;
+  marginRight?: string;
+  marginVertical?: string;
+  marginHorizontal?: string;
+  text: string;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
