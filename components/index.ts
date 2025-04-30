@@ -1,2 +1,2 @@
-export { Btn } from './Btn';
-export { HomeScreen } from './homescreen';
+export * from './atoms';
+export * from './screens';
