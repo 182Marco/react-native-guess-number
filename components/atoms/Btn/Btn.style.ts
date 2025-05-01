@@ -3,6 +3,9 @@ import * as Gs from '../../../styles';
 import { IStyleProps } from './Btn.model';
 
 const S = StyleSheet.create({
+  margins: {
+    margin: 0,
+  },
   btnBox: {
     borderRadius: 8,
     overflow: 'hidden',
@@ -17,10 +20,8 @@ const S = StyleSheet.create({
   },
 });
 
-const btnBoxStyle = (p: IStyleProps) => ({
-  ...S.btnBox,
-  backgroundColor: p.BgColor || Gs.colors.buttonColor,
-  borderRadius: Number(p.borderRadius || 10),
+const btnMargins = (p: IStyleProps) => ({
+  ...S.margins,
   marginTop: Number(p.marginTop || 0),
   marginBottom: Number(p.marginBottom || 0),
   marginLeft: Number(p.marginLeft || 0),
@@ -29,10 +30,16 @@ const btnBoxStyle = (p: IStyleProps) => ({
   marginVertical: Number(p.marginVertical || 0),
 });
 
+const btnBoxStyle = (p: IStyleProps) => ({
+  ...S.btnBox,
+  backgroundColor: p.BgColor || Gs.colors.primaryBtn,
+  borderRadius: Number(p.borderRadius || 28),
+});
+
 const btnStyle = (p: IStyleProps) => ({
   ...S.btn,
-  paddingVertical: Number(p.paddingVertical || 10),
-  paddingHorizontal: Number(p.paddingHorizontal || 20),
+  paddingVertical: Number(p.paddingVertical || 8),
+  paddingHorizontal: Number(p.paddingHorizontal || 16),
   elevation: Number(p.paddingVertical) && Number(p.paddingHorizontal) ? 2 : 0,
 });
 
@@ -41,4 +48,4 @@ const btnTextStyle = (p: IStyleProps) => ({
   color: p.color || Gs.colors.textColor,
 });
 
-export { btnStyle, btnBoxStyle, btnTextStyle };
+export { btnStyle, btnBoxStyle, btnTextStyle, btnMargins };
