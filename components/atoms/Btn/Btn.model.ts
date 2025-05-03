@@ -7,6 +7,7 @@ interface BtnAtomProps {
   onPress: (e: GestureResponderEvent) => void;
   paddingVertical?: string;
   paddingHorizontal?: string;
+  margin?: string;
   marginTop?: string;
   marginBottom?: string;
   marginLeft?: string;
