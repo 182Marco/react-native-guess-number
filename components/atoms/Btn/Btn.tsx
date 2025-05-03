@@ -8,7 +8,9 @@ const Btn: IBtn = p => {
     <N.View style={S.btnMargins(p)}>
       <N.View style={S.btnBoxStyle(p)}>
         <N.Pressable
-          style={S.btnBoxStyle(p)}
+          style={({ pressed }) =>
+            pressed ? S.btnBoxStylePressed(p) : S.btnBoxStyle(p)
+          }
           onPress={p.onPress}
           {...Gs.android_ripple(p.rippleColor)}
         >
