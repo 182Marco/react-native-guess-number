@@ -6,6 +6,9 @@ const S = StyleSheet.create({
   margins: {
     margin: 0,
   },
+  pressed: {
+    opacity: 0.75,
+  },
   btnBox: {
     borderRadius: 8,
     overflow: 'hidden',
@@ -22,6 +25,7 @@ const S = StyleSheet.create({
 
 const btnMargins = (p: IStyleProps) => ({
   ...S.margins,
+  margin: Number(p.margin || 0),
   marginTop: Number(p.marginTop || 0),
   marginBottom: Number(p.marginBottom || 0),
   marginLeft: Number(p.marginLeft || 0),
@@ -36,6 +40,11 @@ const btnBoxStyle = (p: IStyleProps) => ({
   borderRadius: Number(p.borderRadius || 28),
 });
 
+const btnBoxStylePressed = (p: IStyleProps) => ({
+  ...btnBoxStyle,
+  opacity: 0.75,
+});
+
 const btnStyle = (p: IStyleProps) => ({
   ...S.btn,
   paddingVertical: Number(p.paddingVertical || 8),
@@ -48,4 +57,4 @@ const btnTextStyle = (p: IStyleProps) => ({
   color: p.color || Gs.colors.textColor,
 });
 
-export { btnStyle, btnBoxStyle, btnTextStyle, btnMargins };
+export { btnStyle, btnBoxStyle, btnBoxStylePressed, btnTextStyle, btnMargins };
