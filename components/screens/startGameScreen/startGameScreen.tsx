@@ -6,7 +6,7 @@ import { S } from './startGameScreen.style';
 import { usestartGameScreen } from './startGameScreen.hook';
 import * as Styles from '../../../styles';
 
-const startGameScreen = () => {
+const StartGameScreen = () => {
   const h = usestartGameScreen();
   return (
     <N.View style={S.allScreenBox}>
@@ -22,10 +22,7 @@ const startGameScreen = () => {
           <C.Btn
             text={texts.confirmBtnText}
             onPress={() => {}}
-            BgColor="transparent"
-            color={Gs.colors.errorColor}
-            paddingHorizontal="16"
-            paddingVertical="8"
+            {...Gs.btnSecondaryStyle}
           />
         </N.View>
       </N.View>
@@ -33,4 +30,4 @@ const startGameScreen = () => {
   );
 };
 
-export { startGameScreen };
+export { StartGameScreen };
