@@ -3,7 +3,7 @@ import * as C from '@/components';
 import appConfig from '../../app.json';
 import * as R from 'react';
 
-const Root = () => <C.startGameScreen />;
+const Root = () => <C.Root />;
 
 const { name } = appConfig.expo;
 
