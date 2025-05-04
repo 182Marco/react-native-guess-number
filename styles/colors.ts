@@ -1,9 +1,8 @@
-import { btnPrimary } from './btns';
 import { IAndroid_ripple } from './models';
 import { isHexColor } from './utils';
 
 const colors: Record<string, string> = {
-  background: '#4e0329',
+  primary: '#4e0329',
   btnPrimaryRipple: '#640233',
   primaryBtn: '#72063c',
   secondary: '#ddb52f',
