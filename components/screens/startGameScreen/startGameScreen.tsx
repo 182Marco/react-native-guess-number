@@ -2,7 +2,7 @@ import * as N from 'react-native';
 import * as C from '../..';
 import * as Gs from '../../../styles';
 import { texts } from '../../../texts';
-import { S, btnStyles } from './startGameScreen.style';
+import { S } from './startGameScreen.style';
 import { usestartGameScreen } from './startGameScreen.hook';
 import * as Styles from '../../../styles';
 
@@ -17,15 +17,15 @@ const startGameScreen = () => {
           maxLength={2}
           keyboardType="number-pad"
         />
-        <N.View>
-          <C.Btn text={texts.resetBtnText} onPress={() => {}} {...btnStyles} />
+        <N.View style={S.btnRow}>
+          <C.Btn text={texts.resetBtnText} onPress={() => {}} margin="4" />
           <C.Btn
             text={texts.confirmBtnText}
             onPress={() => {}}
             BgColor="transparent"
             color={Gs.colors.errorColor}
-            paddingHorizontal="0"
-            paddingVertical="0"
+            paddingHorizontal="16"
+            paddingVertical="8"
           />
         </N.View>
       </N.View>
