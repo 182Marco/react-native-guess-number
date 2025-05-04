@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import * as Gs from '../../../styles';
+import * as Gs from '@/styles';
 import { IStyleProps } from './Btn.model';
 
 const S = StyleSheet.create({
