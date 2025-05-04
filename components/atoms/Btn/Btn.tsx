@@ -1,7 +1,7 @@
 import { IBtn } from './Btn.model';
 import * as N from 'react-native';
 import * as S from './Btn.style';
-import * as Gs from '../../../styles';
+import * as Gs from '@/styles';
 
 const Btn: IBtn = p => {
   return (
