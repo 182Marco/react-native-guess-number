@@ -1,10 +1,10 @@
 import { colors } from './colors';
 
-const btnPrimary = {
-  BgColor: colors.primaryBtn,
-  borderRadius: '28',
-  paddingVertical: '8',
+const btnSecondaryStyle = {
+  BgColor: 'transparent',
+  color: colors.errorColor,
   paddingHorizontal: '16',
+  paddingVertical: '8',
 };
 
-export { btnPrimary };
+export { btnSecondaryStyle };
