@@ -2,10 +2,6 @@ import { StyleSheet } from 'react-native';
 import * as globalS from '../../../styles';
 
 const S = StyleSheet.create({
-  allScreenBox: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
   btnRow: {
     flexDirection: 'row',
     justifyContent: 'center',
