@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import * as globalS from '../../../styles';
+import * as globalS from '@/styles';
 
 const S = StyleSheet.create({
   btnRow: {
@@ -10,7 +10,7 @@ const S = StyleSheet.create({
     padding: 16,
     marginTop: 100,
     marginHorizontal: 24,
-    backgroundColor: globalS.colors.background,
+    backgroundColor: globalS.colors.primary,
     borderRadius: 8,
     elevation: 4,
     justifyContent: 'center',
