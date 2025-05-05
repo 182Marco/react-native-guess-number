@@ -1,1 +1,1 @@
-export { startGameScreen } from './startGameScreen';
+export { StartGameScreen } from './startGameScreen';
