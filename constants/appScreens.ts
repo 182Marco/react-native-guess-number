@@ -3,4 +3,6 @@ enum appScreens {
   GAME_SCREEN = 'GAME_SCREEN',
 }
 
-export { appScreens };
+type ISetScreen = (str: appScreens) => void;
+
+export { appScreens, ISetScreen };
