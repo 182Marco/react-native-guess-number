@@ -3,10 +3,11 @@ import * as C from '@/components';
 import * as Gs from '@/styles';
 import { texts } from '@/texts';
 import { S } from './startGameScreen.style';
-import { usestartGameScreen } from './startGameScreen.hook';
+import { useStartGameScreen } from './startGameScreen.hook';
+import { IStartGameScreen } from './startGameScreen.models';
 
-const StartGameScreen = () => {
-  const h = usestartGameScreen();
+const StartGameScreen: IStartGameScreen = p => {
+  const h = useStartGameScreen(p);
   return (
     <N.View style={S.inputBox}>
       <N.TextInput
@@ -18,14 +19,10 @@ const StartGameScreen = () => {
         onChangeText={h.setNumberValue}
       />
       <N.View style={S.btnRow}>
-        <C.Btn
-          text={texts.resetBtnText}
-          onPress={() => h.setNumberValue('')}
-          margin="4"
-        />
+        <C.Btn text={texts.resetBtnText} onPress={h.reset} margin="4" />
         <C.Btn
           text={texts.confirmBtnText}
-          onPress={() => {}}
+          onPress={() => h.handelConfirm(h.numberValue)}
           {...Gs.btnSecondaryStyle}
         />
       </N.View>
