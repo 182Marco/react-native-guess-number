@@ -14,7 +14,7 @@ const useRoot = () => {
 
   const isScreen: IIsScreen = str => screen === str;
 
-  return { screen, setScreen, isScreen, setPickedNum };
+  return { screen, setScreen, isScreen, setPickedNum, pickedNum };
 };
 
 export { useRoot };
