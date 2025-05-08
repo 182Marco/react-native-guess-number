@@ -8,10 +8,10 @@ import { IGameScreen } from './gameScreen.models';
 import { appScreens } from '@/constants';
 
 const GameScreen: IGameScreen = p => {
-  const h = useGameScreen(p.setScreen);
+  const h = useGameScreen(p);
   return (
     <N.View style={S.screen}>
-      <N.Text>Opponent's Guess</N.Text>
+      <C.Title text={texts.gameScreenTitleText} />
       {/*  GUESS*/}
       <N.Text>Higher or Lower</N.Text>
       <C.Btn onPress={() => {}} text="+" />
