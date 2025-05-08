@@ -6,6 +6,7 @@ const texts = {
   alertNumLessThan1Description: 'The number must be greater than 1',
   alertNumIsNaNDescription: "What you've entered is not a number",
   btnAlertOkText: 'Ok',
+  gameScreenTitleText: "Opponent's Guess",
 };
 
 export { texts };
