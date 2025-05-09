@@ -10,7 +10,7 @@ const useGameScreen: IUseGameScreen = p => {
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
 
-  return { initialGuess };
+  return { initialGuess, currGuess };
 };
 
 export { useGameScreen };
