@@ -1,0 +1,1 @@
+export { genRandomBetween } from './randomNum';
