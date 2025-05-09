@@ -13,14 +13,16 @@ const Root: React.FC = () => {
       imageStyle={S.img}
       style={S.bg}
     >
-      <N.SafeAreaView>
-        {h.isScreen(appScreens.START_GAME_SCREEN) && (
-          <C.StartGameScreen setPickedNum={h.setPickedNum} />
-        )}
-        {h.isScreen(appScreens.GAME_SCREEN) && (
-          <C.GameScreen setScreen={h.setScreen} />
-        )}
-      </N.SafeAreaView>
+      <N.SafeAreaView />
+      {h.isScreen(appScreens.START_GAME_SCREEN) && (
+        <C.StartGameScreen setPickedNum={h.setPickedNum} />
+      )}
+      {h.isScreen(appScreens.GAME_SCREEN) && (
+        <C.GameScreen
+          setScreen={h.setScreen}
+          pickedNum={h.pickedNum as number}
+        />
+      )}
     </N.ImageBackground>
   );
 };
