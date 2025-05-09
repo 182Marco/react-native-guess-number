@@ -12,7 +12,7 @@ const GameScreen: IGameScreen = p => {
   return (
     <N.View style={S.screen}>
       <C.Title text={texts.gameScreenTitleText} />
-      {/*  GUESS*/}
+      <C.NumberDisplay num={h.currGuess} />
       <N.Text>Higher or Lower</N.Text>
       <C.Btn onPress={() => {}} text="+" />
       <C.Btn onPress={() => {}} text="-" />
