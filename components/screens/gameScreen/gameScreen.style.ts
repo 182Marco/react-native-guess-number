@@ -3,10 +3,14 @@ import { StyleSheet } from 'react-native';
 const S = StyleSheet.create({
   screen: {
     flex: 1,
-    paddingVertical: 30,
+    paddingVertical: 60,
     paddingHorizontal: 20,
-    borderWidth: 2,
-    borderColor: 'red',
+  },
+  plusMinusBtnsBox: {
+    marginVertical: 20,
+    flexDirection: 'row',
+    gap: 30,
+    justifyContent: 'center',
   },
 });
 
