@@ -18,7 +18,6 @@ const S = StyleSheet.create({
     alignItems: 'center',
   },
   btnText: {
-    fontSize: 16,
     fontWeight: 700,
   },
 });
@@ -37,7 +36,9 @@ const btnMargins = (p: IStyleProps) => ({
 const btnBoxStyle = (p: IStyleProps) => ({
   ...S.btnBox,
   backgroundColor: p.BgColor || Gs.colors.primaryBtn,
-  borderRadius: Number(p.borderRadius || 28),
+  borderColor: p.borderColor || 'transparent',
+  borderWidth: Number(p.borderWidth) || 0,
+  borderRadius: p.borderRadius || 28,
 });
 
 const btnBoxStylePressed = (p: IStyleProps) => ({
@@ -49,12 +50,15 @@ const btnStyle = (p: IStyleProps) => ({
   ...S.btn,
   paddingVertical: Number(p.paddingVertical || 8),
   paddingHorizontal: Number(p.paddingHorizontal || 16),
+  height: Number(p.height) || undefined,
+  width: Number(p.width) || undefined,
   elevation: Number(p.paddingVertical) && Number(p.paddingHorizontal) ? 2 : 0,
 });
 
 const btnTextStyle = (p: IStyleProps) => ({
   ...S.btnText,
   color: p.color || Gs.colors.textColor,
+  fontSize: Number(p.fontSize) || 16,
 });
 
 export { btnStyle, btnBoxStyle, btnBoxStylePressed, btnTextStyle, btnMargins };
