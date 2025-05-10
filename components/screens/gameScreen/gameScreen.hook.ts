@@ -1,5 +1,5 @@
 import * as R from 'react';
-import { IUseGameScreen } from './gameScreen.models';
+import { IGetNewGuess, IUseGameScreen, DirEnum } from './gameScreen.models';
 import { genRandomBetween } from '@/utils';
 
 const useGameScreen: IUseGameScreen = p => {
@@ -10,7 +10,18 @@ const useGameScreen: IUseGameScreen = p => {
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
 
-  return { initialGuess, currGuess };
+  const getNewGuess: IGetNewGuess = str =>
+    setCurrGuess(pv =>
+      pv > 1 && pv < 99
+        ? genRandomBetween({
+            min: str === DirEnum.UP ? pv : 1,
+            max: str === DirEnum.UP ? 100 : pv,
+            exclude: pv,
+          })
+        : pv
+    );
+
+  return { initialGuess, currGuess, getNewGuess };
 };
 
 export { useGameScreen };
