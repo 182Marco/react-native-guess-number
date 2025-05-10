@@ -1,10 +1,15 @@
-import { GestureResponderEvent, StyleProp, ViewStyle } from 'react-native';
+import { GestureResponderEvent } from 'react-native';
 
 interface BtnAtomProps {
   BgColor?: string;
   borderRadius?: string;
+  borderWidth?: string;
+  borderColor?: string;
   color?: string;
+  height?: string;
+  width?: string;
   onPress: (e: GestureResponderEvent) => void;
+  fontSize?: string;
   paddingVertical?: string;
   paddingHorizontal?: string;
   margin?: string;
