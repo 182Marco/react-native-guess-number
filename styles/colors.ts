@@ -7,7 +7,7 @@ const colors: Record<string, string> = {
   primaryBtn: '#72063c',
   secondary: '#ddb52f',
   inputBackground: '#334155',
-  inputBorder: '#64748B',
+  tertiary: '#64748B',
   textColor: '#F1F5F9',
   errorColor: '#F87171',
   buttonColor: '#3B82F6',
