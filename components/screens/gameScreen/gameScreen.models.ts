@@ -5,7 +5,13 @@ interface IGameScreenProps {
   pickedNum: number;
 }
 
+enum DirEnum {
+  UP = 'up',
+  DOWN = 'down',
+}
+
 type IGameScreen = React.FC<IGameScreenProps>;
 type IUseGameScreen = (p: IGameScreenProps) => Record<string, any>;
+type IGetNewGuess = (str: DirEnum.UP | DirEnum.DOWN) => void;
 
-export { IGameScreen, IUseGameScreen };
+export { IGameScreen, IUseGameScreen, IGetNewGuess, DirEnum };
