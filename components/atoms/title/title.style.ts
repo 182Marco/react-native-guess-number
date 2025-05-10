@@ -5,10 +5,10 @@ const S = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize: 24,
-    color: globalS.colors.secondary,
+    color: globalS.colors.textColor,
     textAlign: 'center',
     borderWidth: 2,
-    borderColor: globalS.colors.secondary,
+    borderColor: globalS.colors.textColor,
     padding: 12,
   },
 });
