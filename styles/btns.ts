@@ -7,4 +7,15 @@ const btnSecondaryStyle = {
   paddingVertical: '8',
 };
 
-export { btnSecondaryStyle };
+const roundedBtn = {
+  width: '70',
+  height: '70',
+  borderRadius: '50%',
+  fontSize: '30',
+  borderWidth: '2',
+  borderColor: colors.textColor,
+  BgColor: 'transparent',
+  rippleColor: colors.textColor,
+};
+
+export { btnSecondaryStyle, roundedBtn };
