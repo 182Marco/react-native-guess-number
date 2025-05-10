@@ -4,7 +4,7 @@ import * as Gs from '@/styles';
 import { texts } from '@/texts';
 import { S } from './gameScreen.style';
 import { useGameScreen } from './gameScreen.hook';
-import { IGameScreen } from './gameScreen.models';
+import { DirEnum, IGameScreen } from './gameScreen.models';
 import { appScreens } from '@/constants';
 
 const GameScreen: IGameScreen = p => {
@@ -14,8 +14,18 @@ const GameScreen: IGameScreen = p => {
       <C.Title text={texts.gameScreenTitleText} />
       <C.NumberDisplay num={h.currGuess} />
       <N.Text>Higher or Lower</N.Text>
-      <C.Btn onPress={() => {}} text="+" />
-      <C.Btn onPress={() => {}} text="-" />
+      <N.View style={S.plusMinusBtnsBox}>
+        <C.Btn
+          {...Gs.roundedBtn}
+          onPress={() => h.getNewGuess(DirEnum.UP)}
+          text="+"
+        />
+        <C.Btn
+          {...Gs.roundedBtn}
+          onPress={() => h.getNewGuess(DirEnum.DOWN)}
+          text="-"
+        />
+      </N.View>
       <C.Btn
         onPress={() => p.setScreen(appScreens.START_GAME_SCREEN)}
         text="get Back"
