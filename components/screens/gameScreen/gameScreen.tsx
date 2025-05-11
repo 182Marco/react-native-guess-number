@@ -17,12 +17,12 @@ const GameScreen: IGameScreen = p => {
       <N.View style={S.plusMinusBtnsBox}>
         <C.Btn
           {...Gs.roundedBtn}
-          onPress={() => h.getNewGuess(DirEnum.UP)}
+          onPress={h.getNewGuess.bind(this, DirEnum.UP)}
           text="+"
         />
         <C.Btn
           {...Gs.roundedBtn}
-          onPress={() => h.getNewGuess(DirEnum.DOWN)}
+          onPress={h.getNewGuess.bind(this, DirEnum.DOWN)}
           text="-"
         />
       </N.View>
