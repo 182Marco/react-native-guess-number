@@ -1,6 +1,13 @@
 import * as R from 'react';
-import { IGetNewGuess, IUseGameScreen, DirEnum } from './gameScreen.models';
+import * as N from 'react-native';
+import {
+  IGetNewGuess,
+  IUseGameScreen,
+  DirEnum,
+  ICheckCheating,
+} from './gameScreen.models';
 import { genRandomBetween } from '@/utils';
+import { texts } from '@/texts';
 
 const useGameScreen: IUseGameScreen = p => {
   const initialGuess = genRandomBetween({
@@ -10,7 +17,19 @@ const useGameScreen: IUseGameScreen = p => {
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
 
-  const getNewGuess: IGetNewGuess = str =>
+  const checkCheating: ICheckCheating = str => {
+    if (
+      (str === DirEnum.UP && currGuess > p.pickedNum) ||
+      (str === DirEnum.DOWN && currGuess < p.pickedNum)
+    ) {
+      N.Alert.alert(texts.missLeadingCpuTitle, texts.missLeadingCpuText);
+      return true;
+    }
+    return false;
+  };
+
+  const getNewGuess: IGetNewGuess = str => {
+    if (checkCheating(str)) return;
     setCurrGuess(pv =>
       pv > 1 && pv < 99
         ? genRandomBetween({
@@ -20,6 +39,7 @@ const useGameScreen: IUseGameScreen = p => {
           })
         : pv
     );
+  };
 
   return { initialGuess, currGuess, getNewGuess };
 };
