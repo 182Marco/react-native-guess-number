@@ -7,6 +7,8 @@ const texts = {
   alertNumIsNaNDescription: "What you've entered is not a number",
   btnAlertOkText: 'Ok',
   gameScreenTitleText: "Opponent's Guess",
+  missLeadingCpuTitle: "Don't lie!",
+  missLeadingCpuText: 'You know that this is wrong...',
 };
 
 export { texts };
