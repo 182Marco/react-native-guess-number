@@ -13,7 +13,7 @@ const GameScreen: IGameScreen = p => {
     <N.View style={S.screen}>
       <C.Title text={texts.gameScreenTitleText} />
       <C.NumberDisplay num={h.currGuess} />
-      <N.Text>Higher or Lower</N.Text>
+      <N.Text>Give a right suggestion to the opponent</N.Text>
       <N.View style={S.plusMinusBtnsBox}>
         <C.Btn
           {...Gs.roundedBtn}
@@ -26,11 +26,12 @@ const GameScreen: IGameScreen = p => {
           text="-"
         />
       </N.View>
+      <N.Text>Round number: {h.round}</N.Text>
       <C.Btn
+        marginTop="30"
         onPress={() => p.setScreen(appScreens.START_GAME_SCREEN)}
         text="get Back"
       />
-      <N.View>LOG ROUNDS</N.View>
     </N.View>
   );
 };
