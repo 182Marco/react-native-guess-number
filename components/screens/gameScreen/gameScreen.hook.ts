@@ -1,13 +1,13 @@
 import * as R from 'react';
 import * as N from 'react-native';
+import { genRandomBetween } from '@/utils';
+import * as U from './gameScreen.utils';
 import {
   IGetNewGuess,
   IUseGameScreen,
   DirEnum,
   ICheckCheating,
 } from './gameScreen.models';
-import { genRandomBetween } from '@/utils';
-import { texts } from '@/texts';
 
 const useGameScreen: IUseGameScreen = p => {
   const initialGuess = genRandomBetween({
@@ -16,32 +16,45 @@ const useGameScreen: IUseGameScreen = p => {
     exclude: p.pickedNum,
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
+  const [round, setRound] = R.useState(1);
 
-  const checkCheating: ICheckCheating = str => {
-    if (
-      (str === DirEnum.UP && currGuess > p.pickedNum) ||
-      (str === DirEnum.DOWN && currGuess < p.pickedNum)
-    ) {
-      N.Alert.alert(texts.missLeadingCpuTitle, texts.missLeadingCpuText);
+  const isCheating: ICheckCheating = str =>
+    (str === DirEnum.UP && currGuess > p.pickedNum) ||
+    (str === DirEnum.DOWN && currGuess < p.pickedNum);
+
+  const getCheatingBtn: ICheckCheating = str => {
+    if (isCheating(str)) {
+      N.Alert.alert(...U.cheatAlertParams);
       return true;
     }
     return false;
   };
 
   const getNewGuess: IGetNewGuess = str => {
-    if (checkCheating(str)) return;
-    setCurrGuess(pv =>
-      pv > 1 && pv < 99
+    if (round > 2) return;
+    if (getCheatingBtn(str)) return;
+    setCurrGuess(pv => {
+      setRound(pvRounds => pvRounds + 1);
+      return pv > 1 && pv < 99
         ? genRandomBetween({
             min: str === DirEnum.UP ? pv : 1,
             max: str === DirEnum.UP ? 100 : pv,
             exclude: pv,
           })
-        : pv
-    );
+        : pv;
+    });
   };
 
-  return { initialGuess, currGuess, getNewGuess };
+  R.useEffect(() => {
+    if (p.pickedNum === currGuess) {
+      N.Alert.alert(...U.pcWinAlertParams);
+    }
+    if (round > 2) {
+      N.Alert.alert(...U.pcLossAlertParams);
+    }
+  }, [p.pickedNum, currGuess, round]);
+
+  return { initialGuess, currGuess, getNewGuess, round };
 };
 
 export { useGameScreen };
