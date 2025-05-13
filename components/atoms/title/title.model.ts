@@ -1,3 +1,10 @@
-type ITitle = React.FC<{ text: string }>;
+interface ITitleProps {
+  text: string;
+  padding?: string;
+}
 
-export { ITitle };
+type ITitle = React.FC<ITitleProps>;
+
+type ITitleStyle = Omit<ITitleProps, 'text'>;
+
+export { ITitle, ITitleStyle };
