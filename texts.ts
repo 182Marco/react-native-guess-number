@@ -12,6 +12,7 @@ const texts = {
   misLeadingCpuText: 'You know that this is wrong...',
   plusBtnText: '+',
   minusBtnText: '-',
+  startGameDescription: 'Give a right suggestion to the opponent',
   misLeadingCpuCancelBtn: 'Sorry',
   resetBtnText: 'Reset',
 };
