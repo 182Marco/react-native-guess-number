@@ -10,6 +10,7 @@ const texts = {
   gameScreenTitleText: "Opponent's Guess",
   misLeadingCpuTitle: "Don't lie!",
   misLeadingCpuText: 'You know that this is wrong...',
+  plusBtnText: '+',
   misLeadingCpuCancelBtn: 'Sorry',
   resetBtnText: 'Reset',
 };
