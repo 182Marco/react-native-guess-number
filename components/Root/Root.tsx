@@ -23,6 +23,12 @@ const Root: React.FC = () => {
           pickedNum={h.pickedNum as number}
         />
       )}
+      {h.isScreen(appScreens.GAME_OVER_SCREEN) && (
+        <C.GameOverScreen
+          setScreen={h.setScreen}
+          setPickedNum={h.setPickedNum}
+        />
+      )}
     </N.ImageBackground>
   );
 };
