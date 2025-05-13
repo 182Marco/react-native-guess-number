@@ -1,9 +1,9 @@
 import * as N from 'react-native';
-import { S } from './title.style';
+import { title } from './title.style';
 import { ITitle } from './title.model';
 
 const Title: ITitle = p => {
-  return <N.Text style={S.title}>{p.text}</N.Text>;
+  return <N.Text style={title(p)}>{p.text}</N.Text>;
 };
 
 export { Title };
