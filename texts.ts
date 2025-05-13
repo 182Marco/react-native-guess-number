@@ -1,5 +1,5 @@
 const texts = {
-  resetBtnText: 'Reset',
+  startGameTitle: 'Guess my number',
   confirmBtnText: 'Confirm',
   alertNumTitle: 'Ivalid number!',
   alertNumToBigDescription: 'The number must be less than 99',
@@ -10,6 +10,7 @@ const texts = {
   misLeadingCpuTitle: "Don't lie!",
   misLeadingCpuText: 'You know that this is wrong...',
   misLeadingCpuCancelBtn: 'Sorry',
+  resetBtnText: 'Reset',
 };
 
 export { texts };
