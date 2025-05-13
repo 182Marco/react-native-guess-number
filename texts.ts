@@ -14,6 +14,7 @@ const texts = {
   minusBtnText: '-',
   startGameDescription: 'Give a right suggestion to the opponent',
   misLeadingCpuCancelBtn: 'Sorry',
+  startOverBtn: 'Start Over',
   resetBtnText: 'Reset',
 };
 
