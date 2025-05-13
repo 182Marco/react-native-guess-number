@@ -6,7 +6,7 @@ const useRoot = () => {
   const [screen, setScreen] = R.useState<appScreens>(
     appScreens.START_GAME_SCREEN
   );
-  const [pickedNum, setPickedNum] = R.useState<number>();
+  const [pickedNum, setPickedNum] = R.useState<number | null>(null);
 
   R.useEffect(() => {
     if (pickedNum) setScreen(appScreens.GAME_SCREEN);
