@@ -11,6 +11,7 @@ const texts = {
   misLeadingCpuTitle: "Don't lie!",
   misLeadingCpuText: 'You know that this is wrong...',
   plusBtnText: '+',
+  minusBtnText: '-',
   misLeadingCpuCancelBtn: 'Sorry',
   resetBtnText: 'Reset',
 };
