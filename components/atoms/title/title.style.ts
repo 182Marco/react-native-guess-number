@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import * as globalS from '@/styles';
+import { ITitleStyle } from './title.model';
 
 const S = StyleSheet.create({
   title: {
@@ -13,4 +14,9 @@ const S = StyleSheet.create({
   },
 });
 
-export { S };
+const title = (p: ITitleStyle) => ({
+  ...S.title,
+  padding: Number(p.padding) || 12,
+});
+
+export { title };
