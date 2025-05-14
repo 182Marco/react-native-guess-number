@@ -8,6 +8,7 @@ import {
   DirEnum,
   ICheckCheating,
 } from './gameScreen.models';
+import { appScreens } from '@/constants';
 
 const useGameScreen: IUseGameScreen = p => {
   const initialGuess = genRandomBetween({
@@ -47,10 +48,11 @@ const useGameScreen: IUseGameScreen = p => {
 
   R.useEffect(() => {
     if (p.pickedNum === currGuess) {
-      N.Alert.alert(...U.pcWinAlertParams);
+      p.setScreen(appScreens.GAME_OVER_SCREEN);
     }
     if (round > 2) {
-      N.Alert.alert(...U.pcLossAlertParams);
+      /*    N.Alert.alert(...U.pcLossAlertParams); */
+      p.setScreen(appScreens.GAME_OVER_SCREEN);
     }
   }, [p.pickedNum, currGuess, round]);
 
