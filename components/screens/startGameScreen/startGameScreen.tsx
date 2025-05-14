@@ -9,22 +9,26 @@ import { IStartGameScreen } from './startGameScreen.models';
 const StartGameScreen: IStartGameScreen = p => {
   const h = useStartGameScreen(p);
   return (
-    <N.View style={S.inputBox}>
-      <N.TextInput
-        style={S.numberInput}
-        placeholderTextColor={Gs.colors.textColor}
-        maxLength={2}
-        keyboardType="number-pad"
-        value={h.numberValue}
-        onChangeText={h.setNumberValue}
-      />
-      <N.View style={S.btnRow}>
-        <C.Btn text={texts.resetBtnText} onPress={h.reset} margin="4" />
-        <C.Btn
-          text={texts.confirmBtnText}
-          onPress={() => h.handelConfirm(h.numberValue)}
-          {...Gs.btnSecondaryStyle}
+    <N.View style={S.screen}>
+      <C.Title text={texts.startGameTitle} />
+      <N.View style={S.inputBox}>
+        <N.Text style={S.inputExplain}>{texts.startGameInputExplain}</N.Text>
+        <N.TextInput
+          style={S.numberInput}
+          placeholderTextColor={Gs.colors.textColor}
+          maxLength={2}
+          keyboardType="number-pad"
+          value={h.numberValue}
+          onChangeText={h.setNumberValue}
         />
+        <N.View style={S.btnRow}>
+          <C.Btn text={texts.resetBtnText} onPress={h.reset} margin="4" />
+          <C.Btn
+            text={texts.confirmBtnText}
+            onPress={() => h.handelConfirm(h.numberValue)}
+            {...Gs.btnSecondaryStyle}
+          />
+        </N.View>
       </N.View>
     </N.View>
   );
