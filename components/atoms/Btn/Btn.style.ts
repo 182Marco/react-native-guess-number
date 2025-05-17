@@ -46,13 +46,4 @@ const btnBoxStylePressed = (p: IStyleProps) => ({
   opacity: 0.75,
 });
 
-const btnStyle = (p: IStyleProps) => ({
-  ...S.btn,
-  paddingVertical: Number(p.paddingVertical || 8),
-  paddingHorizontal: Number(p.paddingHorizontal || 16),
-  height: Number(p.height) || undefined,
-  width: Number(p.width) || undefined,
-  elevation: Number(p.paddingVertical) && Number(p.paddingHorizontal) ? 2 : 0,
-});
-
 export { S };
