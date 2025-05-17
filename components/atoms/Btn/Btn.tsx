@@ -5,7 +5,7 @@ import * as Gs from '@/styles';
 
 const Btn: IBtn = p => {
   return (
-    <N.View style={S.btnMargins(p)}>
+    <N.View style={[S.margins, p.margins]}>
       <N.View style={S.btnBoxStyle(p)}>
         <N.Pressable
           style={({ pressed }) =>

@@ -41,9 +41,4 @@ const btnBoxStyle = (p: IStyleProps) => ({
   borderRadius: p.borderRadius || 28,
 });
 
-const btnBoxStylePressed = (p: IStyleProps) => ({
-  ...btnBoxStyle,
-  opacity: 0.75,
-});
-
 export { S };
