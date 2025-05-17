@@ -6,6 +6,7 @@ interface BtnAtomProps {
   btnStyleProps?: ViewStyle;
   onPress?: ((event: GestureResponderEvent) => void) | null | undefined;
   rippleColor?: CSSColor;
+  text: string;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
