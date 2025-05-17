@@ -1,12 +1,12 @@
 import { IBtn } from './Btn.model';
 import * as N from 'react-native';
-import * as S from './Btn.style';
+import { S } from './Btn.style';
 import * as Gs from '@/styles';
 
 const Btn: IBtn = p => {
   return (
     <N.View style={[S.margins, p.margins]}>
-      <N.View style={S.btnBoxStyle(p)}>
+      <N.View style={[S.btnBox, p.btnStyleProps]}>
         <N.Pressable
           style={({ pressed }) =>
             pressed ? S.btnBoxStylePressed(p) : S.btnBoxStyle(p)
