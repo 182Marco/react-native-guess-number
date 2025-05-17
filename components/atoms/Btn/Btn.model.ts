@@ -1,12 +1,12 @@
 import { CSSColor } from '@/models';
-import { GestureResponderEvent, TextStyle, ViewStyle } from 'react-native';
+import * as N from 'react-native';
 
 interface BtnAtomProps {
-  margins?: ViewStyle;
-  btnStyleProps?: ViewStyle;
-  textStyle?: TextStyle;
+  margins?: N.ViewStyle;
+  btnStyleProps?: N.ViewStyle;
+  textStyle?: N.TextStyle;
   rippleColor?: CSSColor;
-  onPress: ((event: GestureResponderEvent) => void) | null | undefined;
+  onPress: ((ev: N.GestureResponderEvent) => void) | null | undefined;
   text: string;
 }
 
