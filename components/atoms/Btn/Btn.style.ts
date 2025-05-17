@@ -27,10 +27,6 @@ const btnMargins = (p: IStyleProps) => ({
   margin: Number(p.margin || 0),
   marginTop: Number(p.marginTop || 0),
   marginBottom: Number(p.marginBottom || 0),
-  marginLeft: Number(p.marginLeft || 0),
-  marginRight: Number(p.marginRight || 0),
-  marginHorizontal: Number(p.marginHorizontal || 0),
-  marginVertical: Number(p.marginVertical || 0),
 });
 
 export { S };
