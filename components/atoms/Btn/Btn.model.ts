@@ -3,7 +3,8 @@ import * as N from 'react-native';
 
 interface BtnAtomProps {
   margins?: N.ViewStyle;
-  btnStyleProps?: N.ViewStyle;
+  BgAndBorder?: N.ViewStyle;
+  paddingSizeElevation?: N.ViewStyle;
   textStyle?: N.TextStyle;
   rippleColor?: CSSColor;
   onPress: ((ev: N.GestureResponderEvent) => void) | null | undefined;
