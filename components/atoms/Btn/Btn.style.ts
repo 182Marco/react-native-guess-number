@@ -55,10 +55,4 @@ const btnStyle = (p: IStyleProps) => ({
   elevation: Number(p.paddingVertical) && Number(p.paddingHorizontal) ? 2 : 0,
 });
 
-const btnTextStyle = (p: IStyleProps) => ({
-  ...S.btnText,
-  color: p.color || Gs.colors.textColor,
-  fontSize: Number(p.fontSize) || 16,
-});
-
-export { btnStyle, btnBoxStyle, btnBoxStylePressed, btnTextStyle, btnMargins };
+export { S };
