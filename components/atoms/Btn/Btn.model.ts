@@ -1,18 +1,9 @@
-import {
-  ImageStyle,
-  RegisteredStyle,
-  TextStyle,
-  ViewStyle,
-} from 'react-native';
-
-type IStyleReturnedObj = RegisteredStyle<ViewStyle | TextStyle | ImageStyle>;
+import { ViewStyle } from 'react-native';
 
 interface BtnAtomProps {
-  margins: IStyleReturnedObj;
+  margins?: ViewStyle;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
 
-type IStyleProps = Omit<BtnAtomProps, 'onPress' | 'text'>;
-
-export { IBtn, BtnAtomProps, IStyleProps };
+export { IBtn, BtnAtomProps };
