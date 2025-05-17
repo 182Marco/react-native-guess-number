@@ -13,7 +13,7 @@ const Btn: IBtn = p => {
           {...Gs.android_ripple(p.rippleColor)}
         >
           <N.View style={[S.btnBox]}>
-            <N.Text style={[S.btnText, p.btnText]}>{p.text}</N.Text>
+            <N.Text style={[S.btnText, p.textStyle]}>{p.text}</N.Text>
           </N.View>
         </N.Pressable>
       </N.View>
