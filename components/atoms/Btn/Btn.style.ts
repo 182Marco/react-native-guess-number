@@ -33,12 +33,4 @@ const btnMargins = (p: IStyleProps) => ({
   marginVertical: Number(p.marginVertical || 0),
 });
 
-const btnBoxStyle = (p: IStyleProps) => ({
-  ...S.btnBox,
-  backgroundColor: p.BgColor || Gs.colors.primaryBtn,
-  borderColor: p.borderColor || 'transparent',
-  borderWidth: Number(p.borderWidth) || 0,
-  borderRadius: p.borderRadius || 28,
-});
-
 export { S };
