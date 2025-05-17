@@ -5,8 +5,10 @@ import {
   ViewStyle,
 } from 'react-native';
 
+type IStyleReturnedObj = RegisteredStyle<ViewStyle | TextStyle | ImageStyle>;
+
 interface BtnAtomProps {
-  margins: RegisteredStyle<ViewStyle | TextStyle | ImageStyle>;
+  margins: IStyleReturnedObj;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
