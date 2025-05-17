@@ -1,26 +1,12 @@
-import { GestureResponderEvent } from 'react-native';
+import {
+  ImageStyle,
+  RegisteredStyle,
+  TextStyle,
+  ViewStyle,
+} from 'react-native';
 
 interface BtnAtomProps {
-  BgColor?: string;
-  borderRadius?: string;
-  borderWidth?: string;
-  borderColor?: string;
-  color?: string;
-  height?: string;
-  width?: string;
-  onPress: (e: GestureResponderEvent) => void;
-  fontSize?: string;
-  paddingVertical?: string;
-  paddingHorizontal?: string;
-  margin?: string;
-  marginTop?: string;
-  marginBottom?: string;
-  marginLeft?: string;
-  marginRight?: string;
-  marginVertical?: string;
-  marginHorizontal?: string;
-  rippleColor?: string;
-  text: string;
+  margins: RegisteredStyle<ViewStyle | TextStyle | ImageStyle>;
 }
 
 type IBtn = React.FC<BtnAtomProps>;
