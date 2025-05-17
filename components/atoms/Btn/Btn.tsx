@@ -8,14 +8,12 @@ const Btn: IBtn = p => {
     <N.View style={[S.margins, p.margins]}>
       <N.View style={[S.btnBox, p.btnStyleProps]}>
         <N.Pressable
-          style={({ pressed }) =>
-            pressed ? [S.btnBoxStylePressed, S.btnBox] : S.btnBox
-          }
+          style={({ pressed }) => (pressed ? [S.pressed, S.btnBox] : S.btnBox)}
           onPress={p.onPress}
           {...Gs.android_ripple(p.rippleColor)}
         >
-          <N.View style={S.btnStyle(p)}>
-            <N.Text style={S.btnTextStyle(p)}>{p.text}</N.Text>
+          <N.View style={[S.btnBox]}>
+            <N.Text style={[S.btnText, p.btnText]}>{p.text}</N.Text>
           </N.View>
         </N.Pressable>
       </N.View>
