@@ -18,6 +18,9 @@ const S = StyleSheet.create({
   btnText: {
     fontWeight: 700,
   },
+  btnBoxStylePressed: {
+    opacity: 0.75,
+  },
 });
 
 export { S };
