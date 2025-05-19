@@ -16,16 +16,16 @@ const btnSecondaryStyle = {
 const roundedBtn = {
   BgAndBorder: {
     BgColor: 'transparent',
-    borderWidth: '2',
+    borderWidth: 2,
     borderColor: colors.textColor,
     borderRadius: '50%',
   },
   paddingSizeElevation: {
-    width: '70',
-    height: '70',
+    width: 70,
+    height: 70,
   },
   textStyle: {
-    fontSize: '30',
+    fontSize: 30,
   },
   rippleColor: {
     rippleColor: colors.textColor,
