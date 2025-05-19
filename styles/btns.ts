@@ -29,6 +29,7 @@ const roundedBtn = StyleSheet.create({
   },
   textStyle: {
     fontSize: 30,
+    color: colors.textColor,
   },
 });
 
