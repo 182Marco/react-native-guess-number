@@ -1,7 +1,8 @@
+import { CSSColor } from '@/models';
 import { IAndroid_ripple } from './models';
 import { isHexColor } from './utils';
 
-const colors: Record<string, string> = {
+const colors: Record<string, CSSColor> = {
   btnPrimaryRipple: '#640233',
   primaryBtn: '#73183F',
   secondary: '#4e0329',
