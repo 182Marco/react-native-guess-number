@@ -25,7 +25,7 @@ const StartGameScreen: IStartGameScreen = p => {
           <C.Btn
             text={texts.resetBtnText}
             onPress={h.reset}
-            margins={{ margin: 4 }}
+            margins={S.marginPrimaryBtn}
           />
           <C.Btn
             text={texts.confirmBtnText}
