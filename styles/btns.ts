@@ -14,7 +14,7 @@ const btnSecondaryStyle = StyleSheet.create({
   },
 });
 
-const roundedBtn = StyleSheet.create({
+const roundedBtnStyles = StyleSheet.create({
   BgAndBorder: {
     backgroundColor: 'transparent',
     borderWidth: 2,
@@ -32,6 +32,11 @@ const roundedBtn = StyleSheet.create({
     color: colors.textColor,
   },
 });
+
+const roundedBtn = {
+  ...roundedBtnStyles,
+  rippleColor: colors.textColor,
+};
 
 /* rippleColor: {
   rippleColor: colors.textColor,
