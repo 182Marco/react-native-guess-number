@@ -2,10 +2,10 @@ import { IAndroid_ripple } from './models';
 import { isHexColor } from './utils';
 
 const colors: Record<string, string> = {
-  primary: '#4e0329',
   btnPrimaryRipple: '#640233',
-  primaryBtn: '#72063c',
-  secondary: '#ddb52f',
+  primaryBtn: '#73183F',
+  secondary: '#4e0329',
+  primary: '#ddb52f',
   inputBackground: '#334155',
   tertiary: '#64748B',
   textColor: '#F1F5F9',
