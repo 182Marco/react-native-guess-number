@@ -22,7 +22,11 @@ const StartGameScreen: IStartGameScreen = p => {
           onChangeText={h.setNumberValue}
         />
         <N.View style={S.btnRow}>
-          <C.Btn text={texts.resetBtnText} onPress={h.reset} margin="4" />
+          <C.Btn
+            text={texts.resetBtnText}
+            onPress={h.reset}
+            margins={{ margin: 4 }}
+          />
           <C.Btn
             text={texts.confirmBtnText}
             onPress={() => h.handelConfirm(h.numberValue)}
