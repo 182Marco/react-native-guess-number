@@ -1,21 +1,22 @@
 import { colors } from './colors';
+import { StyleSheet } from 'react-native';
 
-const btnSecondaryStyle = {
+const btnSecondaryStyle = StyleSheet.create({
   BgAndBorder: {
-    BgColor: 'transparent',
+    backgroundColor: 'transparent',
   },
   paddingSizeElevation: {
-    paddingHorizontal: '16',
-    paddingVertical: '8',
+    paddingHorizontal: 16,
+    paddingVertical: 8,
   },
   textStyle: {
     color: colors.errorColor,
   },
-};
+});
 
-const roundedBtn = {
+const roundedBtn = StyleSheet.create({
   BgAndBorder: {
-    BgColor: 'transparent',
+    backgroundColor: 'transparent',
     borderWidth: 2,
     borderColor: colors.textColor,
     borderRadius: '50%',
@@ -23,13 +24,16 @@ const roundedBtn = {
   paddingSizeElevation: {
     width: 70,
     height: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   textStyle: {
     fontSize: 30,
   },
-  rippleColor: {
-    rippleColor: colors.textColor,
-  },
-};
+});
+
+/* rippleColor: {
+  rippleColor: colors.textColor,
+}, */
 
 export { btnSecondaryStyle, roundedBtn };
