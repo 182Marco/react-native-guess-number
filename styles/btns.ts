@@ -1,21 +1,35 @@
 import { colors } from './colors';
 
 const btnSecondaryStyle = {
-  BgColor: 'transparent',
-  color: colors.errorColor,
-  paddingHorizontal: '16',
-  paddingVertical: '8',
+  BgAndBorder: {
+    BgColor: 'transparent',
+  },
+  paddingSizeElevation: {
+    paddingHorizontal: '16',
+    paddingVertical: '8',
+  },
+  textStyle: {
+    color: colors.errorColor,
+  },
 };
 
 const roundedBtn = {
-  width: '70',
-  height: '70',
-  borderRadius: '50%',
-  fontSize: '30',
-  borderWidth: '2',
-  borderColor: colors.textColor,
-  BgColor: 'transparent',
-  rippleColor: colors.textColor,
+  BgAndBorder: {
+    BgColor: 'transparent',
+    borderWidth: '2',
+    borderColor: colors.textColor,
+    borderRadius: '50%',
+  },
+  paddingSizeElevation: {
+    width: '70',
+    height: '70',
+  },
+  textStyle: {
+    fontSize: '30',
+  },
+  rippleColor: {
+    rippleColor: colors.textColor,
+  },
 };
 
 export { btnSecondaryStyle, roundedBtn };
