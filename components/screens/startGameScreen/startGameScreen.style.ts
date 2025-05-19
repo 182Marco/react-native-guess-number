@@ -45,6 +45,9 @@ const S = StyleSheet.create({
     borderBottomColor: globalS.colors.secondary,
     borderBottomWidth: 2,
   },
+  marginPrimaryBtn: {
+    margin: 4,
+  },
 });
 
 export { S };
