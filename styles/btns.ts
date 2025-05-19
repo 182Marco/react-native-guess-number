@@ -38,8 +38,4 @@ const roundedBtn = {
   rippleColor: colors.textColor,
 };
 
-/* rippleColor: {
-  rippleColor: colors.textColor,
-}, */
-
 export { btnSecondaryStyle, roundedBtn };
