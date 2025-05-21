@@ -6,9 +6,13 @@ import * as Gs from '@/styles';
 const Btn: IBtn = p => {
   return (
     <N.View style={[S.margins, p.margins]}>
-      <N.View style={[S.btnBox, p.BgAndBorder]}>
+      <N.View style={[S.wrapper, p.BgAndBorder]}>
         <N.Pressable
-          style={({ pressed }) => (pressed ? [S.pressed, S.btnBox] : S.btnBox)}
+          style={({ pressed }) =>
+            pressed
+              ? [S.pressed, S.btnBox, p.paddingSizeElevation]
+              : [S.btnBox, p.paddingSizeElevation]
+          }
           onPress={p.onPress}
           {...Gs.android_ripple(p.rippleColor)}
         >
