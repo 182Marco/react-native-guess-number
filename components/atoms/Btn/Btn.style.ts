@@ -8,10 +8,12 @@ const S = StyleSheet.create({
   pressed: {
     opacity: 0.75,
   },
-  btnBox: {
-    borderRadius: 50,
+  wrapper: {
     overflow: 'hidden',
     backgroundColor: Gs.colors.primaryBtn,
+    borderRadius: 50,
+  },
+  btnBox: {
     paddingVertical: 8,
     paddingHorizontal: 16,
   },
