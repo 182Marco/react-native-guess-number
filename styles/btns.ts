@@ -14,23 +14,32 @@ const btnSecondaryStyle = StyleSheet.create({
   },
 });
 
-const roundedBtn = StyleSheet.create({
+const sizeRoundedBtn = 70;
+
+const roundedBtnStyles = StyleSheet.create({
   BgAndBorder: {
     backgroundColor: 'transparent',
     borderWidth: 2,
     borderColor: colors.textColor,
-    borderRadius: '50%',
+    borderRadius: sizeRoundedBtn / 2,
   },
   paddingSizeElevation: {
-    width: 70,
-    height: 70,
+    width: sizeRoundedBtn,
+    height: sizeRoundedBtn,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingVertical: 0,
+    paddingHorizontal: 0,
   },
   textStyle: {
     fontSize: 30,
     color: colors.textColor,
   },
 });
+
+const roundedBtn = {
+  ...roundedBtnStyles,
+  rippleColor: colors.textColor,
+};
 
 export { btnSecondaryStyle, roundedBtn };
