@@ -25,12 +25,11 @@ const StartGameScreen: IStartGameScreen = p => {
           <C.Btn
             text={texts.resetBtnText}
             onPress={h.reset}
-            margins={S.marginPrimaryBtn}
+            {...Gs.btnSecondaryStyle}
           />
           <C.Btn
             text={texts.confirmBtnText}
             onPress={() => h.handelConfirm(h.numberValue)}
-            {...Gs.btnSecondaryStyle}
           />
         </N.View>
       </N.View>
