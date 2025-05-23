@@ -2,6 +2,7 @@ import * as N from 'react-native';
 import * as C from '@/components';
 import * as Gs from '@/styles';
 import { texts } from '@/texts';
+import { Ionicons } from '@expo/vector-icons';
 import { S } from './gameScreen.style';
 import { useGameScreen } from './gameScreen.hook';
 import { DirEnum, IGameScreen } from './gameScreen.models';
@@ -21,7 +22,9 @@ const GameScreen: IGameScreen = p => {
         <C.Btn
           {...Gs.roundedBtn}
           onPress={h.getNewGuess.bind(this, DirEnum.DOWN)}
-          text={texts.minusBtnText}
+          text={
+            <Ionicons name="remove" size={24} color={Gs.colors.textColor} />
+          }
         />
       </N.View>
       <N.Text>Round number: {h.round}</N.Text>
