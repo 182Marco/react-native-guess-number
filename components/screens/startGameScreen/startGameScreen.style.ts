@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import * as globalS from '@/styles';
+import * as Gs from '@/styles';
 
 const S = StyleSheet.create({
   screen: {
@@ -11,9 +11,10 @@ const S = StyleSheet.create({
     marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'center',
+    gap: 10,
   },
   inputExplain: {
-    color: globalS.colors.primaryBtn,
+    color: Gs.colors.errorColor,
     fontWeight: 700,
     fontSize: 24,
     textAlign: 'center',
@@ -24,7 +25,7 @@ const S = StyleSheet.create({
     paddingVertical: 22,
     paddingHorizontal: 60,
     marginHorizontal: 24,
-    backgroundColor: globalS.colors.primary,
+    backgroundColor: Gs.colors.secondary,
     borderRadius: 8,
     elevation: 4,
     justifyContent: 'center',
@@ -39,14 +40,11 @@ const S = StyleSheet.create({
     width: 50,
     textAlign: 'center',
     fontSize: 32,
-    color: globalS.colors.secondary,
+    color: Gs.colors.primary,
     marginBottom: 12,
     fontWeight: 'bold',
-    borderBottomColor: globalS.colors.secondary,
+    borderBottomColor: Gs.colors.primary,
     borderBottomWidth: 2,
-  },
-  marginPrimaryBtn: {
-    margin: 4,
   },
 });
 
