@@ -1,5 +1,6 @@
 import { IAlertParams } from '@/models';
 import { texts } from '@/texts';
+import * as Gs from '@/styles';
 
 const cheatAlertParams: IAlertParams = [
   texts.misLeadingCpuTitle,
@@ -13,4 +14,9 @@ const pcLossAlertParams: IAlertParams = [
   [{ text: 'OK', style: 'default' }],
 ];
 
-export { cheatAlertParams, pcLossAlertParams };
+const ioniconsIconProps = {
+  size: 24,
+  color: Gs.colors.textColor,
+};
+
+export { cheatAlertParams, ioniconsIconProps, pcLossAlertParams };
