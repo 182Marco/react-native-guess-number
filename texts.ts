@@ -15,6 +15,7 @@ const texts = {
   misLeadingCpuCancelBtn: 'Sorry',
   startOverBtn: 'Start Over',
   resetBtnText: 'Reset',
+  pcLossAlertParamsTitle: 'You won!',
 };
 
 export { texts };
