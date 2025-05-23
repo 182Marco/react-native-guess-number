@@ -1,6 +1,7 @@
+import * as N from 'react-native';
 interface ITitleProps {
   text: string;
-  padding?: string;
+  styles?: N.TextStyle;
 }
 
 type ITitle = React.FC<ITitleProps>;
