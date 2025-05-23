@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { S } from './gameScreen.style';
 import { useGameScreen } from './gameScreen.hook';
 import { DirEnum, IGameScreen } from './gameScreen.models';
+import { ioniconsIconProps } from './gameScreen.utils';
 
 const GameScreen: IGameScreen = p => {
   const h = useGameScreen(p);
@@ -17,14 +18,12 @@ const GameScreen: IGameScreen = p => {
         <C.Btn
           {...Gs.roundedBtn}
           onPress={h.getNewGuess.bind(this, DirEnum.UP)}
-          text={texts.plusBtnText}
+          text={<Ionicons name="add" {...ioniconsIconProps} />}
         />
         <C.Btn
           {...Gs.roundedBtn}
           onPress={h.getNewGuess.bind(this, DirEnum.DOWN)}
-          text={
-            <Ionicons name="remove" size={24} color={Gs.colors.textColor} />
-          }
+          text={<Ionicons name="remove" {...ioniconsIconProps} />}
         />
       </N.View>
       <N.Text>Round number: {h.round}</N.Text>
