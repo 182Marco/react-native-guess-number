@@ -10,7 +10,7 @@ const cheatAlertParams: IAlertParams = [
 
 const pcLossAlertParams: IAlertParams = [
   texts.pcLossAlertParamsTitle,
-  'IL PC HA FATTO 3 TENTATIVI SENZA INDOVINARE',
+  texts.pcLossAlertParamsDescription,
   [{ text: 'OK', style: 'default' }],
 ];
 
