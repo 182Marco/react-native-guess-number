@@ -2,11 +2,12 @@ import { colors } from '@/styles';
 import { StyleSheet } from 'react-native';
 
 const S = StyleSheet.create({
-  screenWrapper: {},
+  screenWrapper: { marginTop: 60 },
   text: {
-    fontSize: 50,
-    fontWeight: 900,
+    fontSize: 30,
     color: 'pink',
+    width: '80%',
+    margin: 'auto',
   },
 });
 
