@@ -12,7 +12,10 @@ const GameOverScreen: IGameOverScreen = p => {
     <N.View style={S.screenWrapper}>
       <C.Title styles={S.text} text={texts.gameOverScreenTitle} />
       <N.View style={S.imgWrap}>
-        <N.Image source={require('@/assets/images/success.png')} style={{}} />
+        <N.Image
+          source={require('@/assets/images/success.png')}
+          style={S.img}
+        />
       </N.View>
       <C.Btn onPress={h.reset} text={texts.startOverBtn} />
     </N.View>
