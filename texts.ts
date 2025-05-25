@@ -17,6 +17,7 @@ const texts = {
   resetBtnText: 'Reset',
   pcLossAlertParamsTitle: 'You won!',
   pcLossAlertParamsDescription: 'You took 3 shots without guessing',
+  gameOverScrenTitle: 'Game Over Screen',
 };
 
 export { texts };
