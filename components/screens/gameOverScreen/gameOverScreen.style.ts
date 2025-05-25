@@ -1,6 +1,7 @@
 import * as Gs from '@/styles';
 import { StyleSheet } from 'react-native';
 
+const imageSize = '100%';
 const imageWrapSize = 400;
 
 const S = StyleSheet.create({
@@ -20,6 +21,10 @@ const S = StyleSheet.create({
     borderColor: Gs.colors.inputBackground,
     overflow: 'hidden',
     margin: 36,
+  },
+  img: {
+    width: imageSize,
+    height: imageSize,
   },
 });
 
