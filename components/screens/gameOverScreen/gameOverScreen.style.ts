@@ -8,6 +8,7 @@ const S = StyleSheet.create({
     color: Gs.colors.inputBackground,
     width: '80%',
     margin: 'auto',
+    marginBottom: 25,
   },
 });
 
