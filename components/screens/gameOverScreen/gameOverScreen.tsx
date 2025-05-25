@@ -9,9 +9,11 @@ import { appScreens } from '@/constants';
 const GameOverScreen: IGameOverScreen = p => {
   const h = useGameOverScreen(p);
   return (
-    <N.View style={{}}>
+    <N.View style={S.screenWrapper}>
       <C.Title styles={S.text} text={texts.gameOverScreenTitle} />
-      <N.Image source={require('@/assets/images/success.png')} />
+      <N.View style={S.imgWrap}>
+        <N.Image source={require('@/assets/images/success.png')} style={{}} />
+      </N.View>
       <C.Btn onPress={h.reset} text={texts.startOverBtn} />
     </N.View>
   );
