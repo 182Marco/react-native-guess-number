@@ -1,7 +1,7 @@
 import * as Gs from '@/styles';
 import { StyleSheet } from 'react-native';
 
-const imageSize = 400;
+const imageWrapSize = 400;
 
 const S = StyleSheet.create({
   screenWrapper: { marginTop: 60 },
@@ -13,9 +13,13 @@ const S = StyleSheet.create({
     marginBottom: 25,
   },
   imgWrap: {
-    width: imageSize,
-    height: imageSize,
+    width: imageWrapSize,
+    height: imageWrapSize,
     borderRadius: 200,
+    borderWidth: 3,
+    borderColor: Gs.colors.inputBackground,
+    overflow: 'hidden',
+    margin: 36,
   },
 });
 
