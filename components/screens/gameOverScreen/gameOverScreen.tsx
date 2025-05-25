@@ -10,7 +10,7 @@ const GameOverScreen: IGameOverScreen = p => {
   const h = useGameOverScreen(p);
   return (
     <N.View>
-      <N.Text style={S.text}>Game Over Screen</N.Text>
+      <C.Title style={S.text} text={texts.gameOverScrenTitle} />
       <C.Btn onPress={h.reset} text={texts.startOverBtn} />
     </N.View>
   );
