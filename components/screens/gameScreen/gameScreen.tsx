@@ -26,7 +26,7 @@ const GameScreen: IGameScreen = p => {
           text={<Ionicons name="remove" {...ioniconsIconProps} />}
         />
       </N.View>
-      <N.Text>Round number: {h.round}</N.Text>
+      <N.Text>{texts.gameScreenSummary + p.round}</N.Text>
     </N.View>
   );
 };
