@@ -1,7 +1,11 @@
-import { colors } from '@/styles';
+import * as Gs from '@/styles';
 import { StyleSheet } from 'react-native';
 
 const S = StyleSheet.create({
+  title: {
+    color: Gs.colors.secondary,
+    borderColor: Gs.colors.secondary,
+  },
   screen: {
     flex: 1,
     paddingVertical: 60,
@@ -12,6 +16,11 @@ const S = StyleSheet.create({
     flexDirection: 'row',
     gap: 30,
     justifyContent: 'center',
+  },
+  SummaryText: {
+    color: Gs.colors.secondary,
+    marginBottom: 0,
+    marginTop: 0,
   },
 });
 
