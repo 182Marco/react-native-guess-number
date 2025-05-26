@@ -13,7 +13,7 @@ const texts = {
   plusBtnText: '+',
   startGameDescription: 'Give a right suggestion to the opponent',
   misLeadingCpuCancelBtn: 'Sorry',
-  startOverBtn: 'Start Over',
+  startOverBtn: 'Start new game',
   resetBtnText: 'Reset',
   pcLossAlertParamsTitle: 'You won!',
   pcLossAlertParamsDescription: 'You took 3 shots without guessing',
