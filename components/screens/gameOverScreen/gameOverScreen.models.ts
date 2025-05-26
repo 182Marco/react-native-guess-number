@@ -3,7 +3,7 @@ import { ISetScreen } from '@/constants';
 interface IGameOverScreenProps {
   setScreen: ISetScreen;
   setPickedNum: (n: number | null) => void;
-  setRound: (n: number) => void;
+  setRound: React.Dispatch<React.SetStateAction<number>>;
   round: number;
   pickedNum: number | null;
 }
