@@ -12,7 +12,7 @@ const GameScreen: IGameScreen = p => {
   const h = useGameScreen(p);
   return (
     <N.View style={S.screen}>
-      <C.Title text={texts.gameScreenTitleText} />
+      <C.Title text={texts.gameScreenTitleText} style={S.title} />
       <C.NumberDisplay num={h.currGuess} />
       <N.View style={S.plusMinusBtnsBox}>
         <C.Btn
@@ -26,7 +26,18 @@ const GameScreen: IGameScreen = p => {
           text={<Ionicons name="remove" {...ioniconsIconProps} />}
         />
       </N.View>
-      <N.Text>{texts.gameScreenSummary + p.round}</N.Text>
+      <N.FlatList
+        data={p.round}
+        keyExtractor={e => `${e}`}
+        renderItem={e => (
+          <N.Text style={[Gs.texts.summaryText, S.SummaryText]}>
+            {texts.gameScreenSummary.part1}
+            <N.Text style={Gs.texts.highlightedText}>{e.index + 1}</N.Text>
+            {texts.gameScreenSummary.part2}
+            <N.Text style={Gs.texts.highlightedText}>{e.item}</N.Text>
+          </N.Text>
+        )}
+      />
     </N.View>
   );
 };
