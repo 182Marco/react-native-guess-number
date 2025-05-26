@@ -17,7 +17,6 @@ const useGameScreen: IUseGameScreen = p => {
     exclude: p.pickedNum,
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
-  const [round, setRound] = R.useState(1);
 
   const isCheating: ICheckCheating = str =>
     (str === DirEnum.UP && currGuess > p.pickedNum) ||
@@ -32,10 +31,10 @@ const useGameScreen: IUseGameScreen = p => {
   };
 
   const getNewGuess: IGetNewGuess = str => {
-    if (round > 2) return;
+    if (p.round > 2) return;
     if (getCheatingBtn(str)) return;
     setCurrGuess(pv => {
-      setRound(pvRounds => pvRounds + 1);
+      p.setRound(pv => pv + 1);
       return pv > 1 && pv < 99
         ? genRandomBetween({
             min: str === DirEnum.UP ? pv : 1,
@@ -50,13 +49,13 @@ const useGameScreen: IUseGameScreen = p => {
     if (p.pickedNum === currGuess) {
       p.setScreen(appScreens.GAME_OVER_SCREEN);
     }
-    if (round > 2) {
+    if (p.round > 2) {
       /*    N.Alert.alert(...U.pcLossAlertParams); */
       p.setScreen(appScreens.GAME_OVER_SCREEN);
     }
-  }, [p.pickedNum, currGuess, round]);
+  }, [p.pickedNum, currGuess, p.round]);
 
-  return { initialGuess, currGuess, getNewGuess, round };
+  return { initialGuess, currGuess, getNewGuess };
 };
 
 export { useGameScreen };
