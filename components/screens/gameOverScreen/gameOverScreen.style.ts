@@ -6,7 +6,12 @@ const imageWrapSize = 300;
 const borderRadius = imageWrapSize / 2;
 
 const S = StyleSheet.create({
-  screenWrapper: { marginTop: 60 },
+  screenWrapper: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 30,
+  },
   text: {
     fontSize: 30,
     color: Gs.colors.inputBackground,
@@ -21,12 +26,22 @@ const S = StyleSheet.create({
     borderWidth: 3,
     borderColor: Gs.colors.inputBackground,
     overflow: 'hidden',
-    margin: 36,
+    marginTop: 12,
   },
   img: {
     borderRadius: borderRadius,
     width: imageSize,
     height: imageSize,
+  },
+  SummaryText: {
+    fontSize: 20,
+    textAlign: 'center',
+    marginVertical: 20,
+    color: Gs.colors.inputBackground,
+  },
+  highlightedText: {
+    fontWeight: 900,
+    color: Gs.colors.primary,
   },
 });
 
