@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native';
 const imageSize = '100%';
 const imageWrapSize = 300;
 const borderRadius = imageWrapSize / 2;
+const screenMainColor = Gs.colors.inputBackground;
 
 const S = StyleSheet.create({
   screenWrapper: {
@@ -12,9 +13,10 @@ const S = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 30,
   },
-  text: {
+  title: {
     fontSize: 30,
-    color: Gs.colors.inputBackground,
+    color: screenMainColor,
+    borderColor: screenMainColor,
     width: '80%',
     margin: 'auto',
     marginBottom: 25,
@@ -24,7 +26,7 @@ const S = StyleSheet.create({
     height: imageWrapSize,
     borderRadius: borderRadius,
     borderWidth: 3,
-    borderColor: Gs.colors.inputBackground,
+    borderColor: screenMainColor,
     overflow: 'hidden',
     marginTop: 12,
   },
@@ -37,7 +39,7 @@ const S = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginVertical: 20,
-    color: Gs.colors.inputBackground,
+    color: screenMainColor,
   },
   highlightedText: {
     fontWeight: 900,
