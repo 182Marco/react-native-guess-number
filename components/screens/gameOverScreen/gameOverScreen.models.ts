@@ -3,6 +3,7 @@ import { ISetScreen } from '@/constants';
 interface IGameOverScreenProps {
   setScreen: ISetScreen;
   setPickedNum: (n: number | null) => void;
+  setGuessesNum: (n: number) => void;
   pickedNum: number | null;
   guessesNum: number;
 }
