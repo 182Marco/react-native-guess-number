@@ -3,9 +3,9 @@ import { ISetScreen } from '@/constants';
 interface IGameOverScreenProps {
   setScreen: ISetScreen;
   setPickedNum: (n: number | null) => void;
-  setGuessesNum: (n: number) => void;
+  setRound: (n: number) => void;
+  round: number;
   pickedNum: number | null;
-  guessesNum: number;
 }
 
 type IUseGameOverScreen = (p: IGameOverScreenProps) => Record<string, any>;
