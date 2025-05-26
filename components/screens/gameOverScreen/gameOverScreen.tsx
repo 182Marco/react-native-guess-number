@@ -17,9 +17,9 @@ const GameOverScreen: IGameOverScreen = p => {
         />
       </N.View>
       <N.Text style={S.SummaryText}>
-        Your phone needed
-        <N.Text style={S.highlightedText}>{p.guessesNum}</N.Text> rounds to
-        guess the number
+        {texts.gameOverSummary.part1}
+        <N.Text style={S.highlightedText}>{p.guessesNum}</N.Text>
+        {texts.gameOverSummary.part2}
         <N.Text style={S.highlightedText}>{p.pickedNum}</N.Text>
       </N.Text>
       <C.Btn onPress={h.reset} text={texts.startOverBtn} />
