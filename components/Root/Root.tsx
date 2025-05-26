@@ -21,12 +21,17 @@ const Root: React.FC = () => {
         <C.GameScreen
           setScreen={h.setScreen}
           pickedNum={h.pickedNum as number}
+          round={h.round}
+          setRound={h.setRound}
         />
       )}
       {h.isScreen(appScreens.GAME_OVER_SCREEN) && (
         <C.GameOverScreen
           setScreen={h.setScreen}
+          pickedNum={h.pickedNum}
           setPickedNum={h.setPickedNum}
+          round={h.round}
+          setRound={h.setRound}
         />
       )}
     </N.ImageBackground>
