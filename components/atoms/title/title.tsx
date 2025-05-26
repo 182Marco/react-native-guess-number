@@ -3,7 +3,7 @@ import { S } from './title.style';
 import { ITitle } from './title.model';
 
 const Title: ITitle = p => {
-  return <N.Text style={[S.title, p.styles]}>{p.text}</N.Text>;
+  return <N.Text style={[S.title, p.style]}>{p.text}</N.Text>;
 };
 
 export { Title };
