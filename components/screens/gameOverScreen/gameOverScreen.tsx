@@ -9,7 +9,7 @@ const GameOverScreen: IGameOverScreen = p => {
   const h = useGameOverScreen(p);
   return (
     <N.View style={S.screenWrapper}>
-      <C.Title styles={S.text} text={texts.gameOverScreenTitle} />
+      <C.Title styles={S.title} text={texts.gameOverScreenTitle} />
       <N.View style={S.imgWrap}>
         <N.Image
           source={require('@/assets/images/success.png')}
