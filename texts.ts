@@ -18,6 +18,10 @@ const texts = {
   pcLossAlertParamsTitle: 'You won!',
   pcLossAlertParamsDescription: 'You took 3 shots without guessing',
   gameOverScreenTitle: 'Game Over Screen',
+  gameOverSummary: {
+    part1: 'Your phone needed ',
+    part2: ' rounds to guess the number ',
+  },
 };
 
 export { texts };
