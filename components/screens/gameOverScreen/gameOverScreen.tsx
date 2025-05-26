@@ -4,7 +4,6 @@ import { S } from './gameOverScreen.style';
 import { useGameOverScreen } from './gameOverScreen.hook';
 import { IGameOverScreen } from './gameOverScreen.models';
 import { texts } from '@/texts';
-import { appScreens } from '@/constants';
 
 const GameOverScreen: IGameOverScreen = p => {
   const h = useGameOverScreen(p);
@@ -17,6 +16,12 @@ const GameOverScreen: IGameOverScreen = p => {
           style={S.img}
         />
       </N.View>
+      <N.Text style={S.SummaryText}>
+        Your phone needed
+        <N.Text style={S.highlightedText}>{p.guessesNum}</N.Text> rounds to
+        guess the number
+        <N.Text style={S.highlightedText}>{p.pickedNum}</N.Text>
+      </N.Text>
       <C.Btn onPress={h.reset} text={texts.startOverBtn} />
     </N.View>
   );
