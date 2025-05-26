@@ -7,10 +7,9 @@ const useRoot = () => {
     appScreens.START_GAME_SCREEN
   );
   const [pickedNum, setPickedNum] = R.useState<number | null>(null);
-  const [round, setRound] = R.useState(1);
+  const [round, setRound] = R.useState<number[]>([]);
 
   R.useEffect(() => {
-    setRound(pv => (pv !== pickedNum ? pv + 1 : pv));
     if (pickedNum) setScreen(appScreens.GAME_SCREEN);
   }, [pickedNum]);
 
