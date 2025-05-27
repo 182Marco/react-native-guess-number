@@ -35,16 +35,6 @@ const S = StyleSheet.create({
     width: imageSize,
     height: imageSize,
   },
-  SummaryText: {
-    fontSize: 20,
-    textAlign: 'center',
-    marginVertical: 20,
-    color: screenMainColor,
-  },
-  highlightedText: {
-    fontWeight: 900,
-    color: Gs.colors.primary,
-  },
 });
 
 export { S };
