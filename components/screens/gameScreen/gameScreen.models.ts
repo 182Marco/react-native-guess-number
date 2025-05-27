@@ -3,8 +3,8 @@ import * as R from 'react';
 
 interface IGameScreenProps {
   setScreen: ISetScreen;
-  setRound: R.Dispatch<R.SetStateAction<number>>;
-  round: number;
+  setRound: R.Dispatch<R.SetStateAction<number[]>>;
+  round: number[];
   pickedNum: number;
 }
 
