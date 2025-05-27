@@ -11,7 +11,7 @@ const cheatAlertParams: IAlertParams = [
 const pcLossAlertParams: IAlertParams = [
   texts.pcLossAlertParamsTitle,
   texts.pcLossAlertParamsDescription,
-  [{ text: 'OK', style: 'default' }],
+  [{ text: texts.btnAlertOkText, style: 'default' }],
 ];
 
 const ioniconsIconProps = {
