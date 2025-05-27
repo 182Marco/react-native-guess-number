@@ -1,10 +1,11 @@
 import { ISetScreen } from '@/constants';
+import * as R from 'react';
 
 interface IGameOverScreenProps {
   setScreen: ISetScreen;
   setPickedNum: (n: number | null) => void;
-  setRound: React.Dispatch<React.SetStateAction<number>>;
-  round: number;
+  setRound: R.Dispatch<R.SetStateAction<number[]>>;
+  round: number[];
   pickedNum: number | null;
 }
 
