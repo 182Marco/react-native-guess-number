@@ -4,8 +4,8 @@ import * as R from 'react';
 interface IGameOverScreenProps {
   setScreen: ISetScreen;
   setPickedNum: (n: number | null) => void;
-  setRound: R.Dispatch<R.SetStateAction<number[]>>;
-  round: number[];
+  setRounds: R.Dispatch<R.SetStateAction<number[]>>;
+  rounds: number[];
   pickedNum: number | null;
 }
 
