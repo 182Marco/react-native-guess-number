@@ -3,8 +3,8 @@ import * as R from 'react';
 
 interface IGameScreenProps {
   setScreen: ISetScreen;
-  setRound: R.Dispatch<R.SetStateAction<number[]>>;
-  round: number[];
+  setRounds: R.Dispatch<R.SetStateAction<number[]>>;
+  rounds: number[];
   pickedNum: number;
 }
 
@@ -15,7 +15,19 @@ enum DirEnum {
 
 type IGameScreen = React.FC<IGameScreenProps>;
 type IUseGameScreen = (p: IGameScreenProps) => Record<string, any>;
-type IGetNewGuess = (str: DirEnum.UP | DirEnum.DOWN) => void;
+type IGetNewGuess = (dir: DirEnum.UP | DirEnum.DOWN) => void;
 type ICheckCheating = (str: DirEnum.UP | DirEnum.DOWN) => boolean;
+type IGetMinOrMax = (
+  dir: DirEnum.UP | DirEnum.DOWN,
+  previousValue: number,
+  rounds: number[]
+) => number;
 
-export { IGameScreen, IUseGameScreen, IGetNewGuess, DirEnum, ICheckCheating };
+export {
+  IGameScreen,
+  IUseGameScreen,
+  IGetNewGuess,
+  DirEnum,
+  ICheckCheating,
+  IGetMinOrMax,
+};
