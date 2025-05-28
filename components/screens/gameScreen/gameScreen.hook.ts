@@ -1,6 +1,6 @@
 import * as R from 'react';
 import * as N from 'react-native';
-import { genRandomBetween } from '@/utils';
+import * as Gu from '@/utils';
 import * as U from './gameScreen.utils';
 import {
   IGetNewGuess,
@@ -11,7 +11,7 @@ import {
 import { appScreens } from '@/constants';
 
 const useGameScreen: IUseGameScreen = p => {
-  const initialGuess = genRandomBetween({
+  const initialGuess = Gu.genRandomBetween({
     min: 1,
     max: 100,
     exclude: p.pickedNum,
@@ -19,7 +19,7 @@ const useGameScreen: IUseGameScreen = p => {
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
 
   R.useEffect(() => {
-    p.setRound([initialGuess]);
+    p.setRounds([initialGuess]);
   }, []);
 
   const isCheating: ICheckCheating = str =>
@@ -34,15 +34,23 @@ const useGameScreen: IUseGameScreen = p => {
     return false;
   };
 
-  const getNewGuess: IGetNewGuess = str => {
-    if (getCheatingBtn(str)) return;
+  const getNewGuess: IGetNewGuess = dir => {
+    if (getCheatingBtn(dir)) return;
     setCurrGuess(pv => {
-      const newGuess = genRandomBetween({
-        min: str === DirEnum.UP ? pv : 1,
-        max: str === DirEnum.UP ? 100 : pv,
+      const g = {
+        min: U.getMin(dir, pv, p.rounds),
+        max: U.getMax(dir, pv, p.rounds),
+        exclude: pv,
+      };
+      console.log(`marcom ---> [ ...p.rounds, pv]: `, [...p.rounds, pv]);
+      console.log(`marcom ---> g: `, g);
+      const newGuess = Gu.genRandomBetween({
+        min: U.getMin(dir, pv, p.rounds),
+        max: U.getMax(dir, pv, p.rounds),
         exclude: pv,
       });
-      p.setRound(pvR => [...pvR, newGuess]);
+      console.log(`marcom ---> newGuess: `, newGuess);
+      p.setRounds(pv => [...pv, newGuess]);
       return newGuess;
     });
   };
@@ -51,7 +59,7 @@ const useGameScreen: IUseGameScreen = p => {
     if (p.pickedNum === currGuess) {
       p.setScreen(appScreens.GAME_OVER_SCREEN);
     }
-  }, [p.pickedNum, currGuess, p.round]);
+  }, [p.pickedNum, currGuess, p.rounds]);
 
   return { initialGuess, currGuess, getNewGuess };
 };
