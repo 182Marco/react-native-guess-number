@@ -27,7 +27,7 @@ const GameScreen: IGameScreen = p => {
         />
       </N.View>
       <N.FlatList
-        data={p.round}
+        data={p.rounds}
         keyExtractor={e => `${e}`}
         renderItem={e => (
           <N.Text style={[Gs.texts.summaryText, S.SummaryText]}>
