@@ -21,8 +21,8 @@ const Root: React.FC = () => {
         <C.GameScreen
           setScreen={h.setScreen}
           pickedNum={h.pickedNum as number}
-          round={h.round}
-          setRound={h.setRound}
+          rounds={h.rounds}
+          setRounds={h.setRounds}
         />
       )}
       {h.isScreen(appScreens.GAME_OVER_SCREEN) && (
@@ -30,8 +30,8 @@ const Root: React.FC = () => {
           setScreen={h.setScreen}
           pickedNum={h.pickedNum}
           setPickedNum={h.setPickedNum}
-          round={h.round}
-          setRound={h.setRound}
+          rounds={h.rounds}
+          setRounds={h.setRounds}
         />
       )}
     </N.ImageBackground>
