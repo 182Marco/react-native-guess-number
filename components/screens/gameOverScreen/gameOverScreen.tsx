@@ -19,7 +19,7 @@ const GameOverScreen: IGameOverScreen = p => {
       </N.View>
       <N.Text style={Gs.texts.summaryText}>
         {texts.gameOverSummary.part1}
-        <N.Text style={Gs.texts.highlightedText}>{p.round.length}</N.Text>
+        <N.Text style={Gs.texts.highlightedText}>{p.rounds.length}</N.Text>
         {texts.gameOverSummary.part2}
         <N.Text style={Gs.texts.highlightedText}>{p.pickedNum}</N.Text>
       </N.Text>
