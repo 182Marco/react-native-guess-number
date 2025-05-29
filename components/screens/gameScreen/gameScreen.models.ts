@@ -17,11 +17,17 @@ type IGameScreen = React.FC<IGameScreenProps>;
 type IUseGameScreen = (p: IGameScreenProps) => Record<string, any>;
 type IGetNewGuess = (dir: DirEnum.UP | DirEnum.DOWN) => void;
 type ICheckCheating = (str: DirEnum.UP | DirEnum.DOWN) => boolean;
-type IGetMinOrMax = (
+
+type IGetMinMaxParam = (
   dir: DirEnum.UP | DirEnum.DOWN,
   previousValue: number,
-  rounds: number[]
-) => number;
+  rounds: number[],
+  picked: number
+) => {
+  min: number;
+  max: number;
+  exclude: number;
+};
 
 export {
   IGameScreen,
@@ -29,5 +35,5 @@ export {
   IGetNewGuess,
   DirEnum,
   ICheckCheating,
-  IGetMinOrMax,
+  IGetMinMaxParam,
 };
