@@ -2,12 +2,11 @@ import * as N from 'react-native';
 import * as C from '@/components';
 import * as Gs from '@/styles';
 import { texts } from '@/texts';
-import { S } from './startGameScreen.style';
 import { useStartGameScreen } from './startGameScreen.hook';
 import { IStartGameScreen } from './startGameScreen.models';
 
 const StartGameScreen: IStartGameScreen = p => {
-  const h = useStartGameScreen(p);
+  const { S, ...h } = useStartGameScreen(p);
   return (
     <N.View style={S.screen}>
       <C.Title text={texts.startGameTitle} />
