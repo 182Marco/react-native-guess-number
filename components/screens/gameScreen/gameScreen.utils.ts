@@ -2,7 +2,7 @@ import { IAlertParams } from '@/models';
 import { texts } from '@/texts';
 import * as Gs from '@/styles';
 import * as Gu from '@/utils';
-import { DirEnum, IGetMinOrMax } from './gameScreen.models';
+import { DirEnum, IGetMinMaxParam } from './gameScreen.models';
 
 const cheatAlertParams: IAlertParams = [
   texts.misLeadingCpuTitle,
@@ -21,24 +21,22 @@ const ioniconsIconProps = {
   color: Gs.colors.textColor,
 };
 
-const getMin: IGetMinOrMax = (dir, pv, rounds) => {
-  if (rounds.length === 1 && dir === DirEnum.DOWN) return 0;
-  if (rounds.length === 1 && dir === DirEnum.UP) return pv;
-  const l = Gu.getLower([...rounds, pv]);
-
-  return l;
-};
-
-const getMax: IGetMinOrMax = (dir, pv, rounds) => {
-  if (rounds.length === 1 && dir === DirEnum.UP) return 100;
-  if (rounds.length === 1 && dir === DirEnum.DOWN) return pv;
-  return Gu.getHigher([...rounds, pv]);
-};
+const getMinMaxParam: IGetMinMaxParam = (dir, pv, rounds, picked) =>
+  dir === DirEnum.UP
+    ? {
+        min: rounds.length > 1 ? Gu.lowerLimit(picked, rounds) : pv,
+        max: Gu.upperLimit(picked, rounds),
+        exclude: pv,
+      }
+    : {
+        min: Gu.lowerLimit(picked, rounds),
+        max: rounds.length > 1 ? Gu.upperLimit(picked, rounds) : pv,
+        exclude: pv,
+      };
 
 export {
   cheatAlertParams,
   ioniconsIconProps,
   pcLossAlertParams,
-  getMin,
-  getMax,
+  getMinMaxParam,
 };
