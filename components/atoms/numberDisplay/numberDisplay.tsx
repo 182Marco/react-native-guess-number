@@ -4,7 +4,7 @@ import { S } from './numberDisplay.style';
 
 const NumberDisplay: INumberDisplay = p => {
   return (
-    <N.View style={S.box}>
+    <N.View style={[S.box, p.style]}>
       <N.Text style={S.text}>{p.num}</N.Text>
     </N.View>
   );
