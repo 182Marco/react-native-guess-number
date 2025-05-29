@@ -9,8 +9,10 @@ import {
   ICheckCheating,
 } from './gameScreen.models';
 import { appScreens } from '@/constants';
+import { useStyles } from './gameScreen.style';
 
 const useGameScreen: IUseGameScreen = p => {
+  const S = useStyles();
   const initialGuess = Gu.genRandomBetween({
     min: 0,
     max: 100,
@@ -50,7 +52,7 @@ const useGameScreen: IUseGameScreen = p => {
     }
   }, [p.pickedNum, currGuess, p.rounds]);
 
-  return { initialGuess, currGuess, getNewGuess };
+  return { S, initialGuess, currGuess, getNewGuess };
 };
 
 export { useGameScreen };
