@@ -12,9 +12,8 @@ import { appScreens } from '@/constants';
 
 const useGameScreen: IUseGameScreen = p => {
   const initialGuess = Gu.genRandomBetween({
-    min: 1,
+    min: 0,
     max: 100,
-    exclude: p.pickedNum,
   });
   const [currGuess, setCurrGuess] = R.useState(initialGuess);
 
@@ -37,19 +36,9 @@ const useGameScreen: IUseGameScreen = p => {
   const getNewGuess: IGetNewGuess = dir => {
     if (getCheatingBtn(dir)) return;
     setCurrGuess(pv => {
-      const g = {
-        min: U.getMin(dir, pv, p.rounds),
-        max: U.getMax(dir, pv, p.rounds),
-        exclude: pv,
-      };
-      console.log(`marcom ---> [ ...p.rounds, pv]: `, [...p.rounds, pv]);
-      console.log(`marcom ---> g: `, g);
-      const newGuess = Gu.genRandomBetween({
-        min: U.getMin(dir, pv, p.rounds),
-        max: U.getMax(dir, pv, p.rounds),
-        exclude: pv,
-      });
-      console.log(`marcom ---> newGuess: `, newGuess);
+      const newGuess = Gu.genRandomBetween(
+        U.getMinMaxParam(dir, pv, p.rounds, p.pickedNum)
+      );
       p.setRounds(pv => [...pv, newGuess]);
       return newGuess;
     });
