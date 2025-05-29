@@ -3,17 +3,16 @@ import * as C from '@/components';
 import * as Gs from '@/styles';
 import { texts } from '@/texts';
 import { Ionicons } from '@expo/vector-icons';
-import { S } from './gameScreen.style';
 import { useGameScreen } from './gameScreen.hook';
 import { DirEnum, IGameScreen } from './gameScreen.models';
 import { ioniconsIconProps } from './gameScreen.utils';
 
 const GameScreen: IGameScreen = p => {
-  const h = useGameScreen(p);
+  const { S, ...h } = useGameScreen(p);
   return (
     <N.View style={S.screen}>
       <C.Title text={texts.gameScreenTitleText} style={S.title} />
-      <C.NumberDisplay num={h.currGuess} />
+      <C.NumberDisplay num={h.currGuess} style={S.displayNumber} />
       <N.View style={S.plusMinusBtnsBox}>
         <C.Btn
           {...Gs.roundedBtn}
