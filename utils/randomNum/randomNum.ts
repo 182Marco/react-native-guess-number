@@ -5,9 +5,9 @@ const genRandomBetween: IGenRandomBetween = ({ min, max, exclude }) => {
 
   if (rnd === exclude) {
     return genRandomBetween({ min, max, exclude });
-  } else {
-    return rnd;
   }
+
+  return rnd;
 };
 
 export { genRandomBetween };
