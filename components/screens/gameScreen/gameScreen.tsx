@@ -27,15 +27,16 @@ const GameScreen: IGameScreen = p => {
         />
       </N.View>
       <N.FlatList
+        showsVerticalScrollIndicator={false}
         data={p.rounds}
         keyExtractor={e => `${e}`}
         renderItem={e => (
-          <N.Text style={[Gs.texts.summaryText, S.SummaryText]}>
-            {texts.gameScreenSummary.part1}
-            <N.Text style={Gs.texts.highlightedText}>{e.index + 1}</N.Text>
-            {texts.gameScreenSummary.part2}
-            <N.Text style={Gs.texts.highlightedText}>{e.item}</N.Text>
-          </N.Text>
+          <C.Summary
+            times={e.index + 1}
+            number={e.item}
+            text1={texts.gameScreenSummary.part1}
+            text2={texts.gameScreenSummary.part2}
+          />
         )}
       />
     </N.View>
