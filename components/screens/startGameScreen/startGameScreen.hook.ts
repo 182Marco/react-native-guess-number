@@ -1,9 +1,10 @@
 import * as R from 'react';
 import { useStartGameScreenAlerts } from './startGameScreen.alerts';
 import { IUseStartGameScreen } from './startGameScreen.models';
-import { appScreens } from '@/constants';
+import { useStyles } from './startGameScreen.style';
 
 const useStartGameScreen: IUseStartGameScreen = p => {
+  const S = useStyles();
   const [numberValue, setNumberValue] = R.useState('');
   const reset = () => setNumberValue('');
 
@@ -24,7 +25,7 @@ const useStartGameScreen: IUseStartGameScreen = p => {
     p.setPickedNum(num);
   };
 
-  return { numberValue, setNumberValue, reset, handelConfirm };
+  return { handelConfirm, numberValue, reset, S, setNumberValue };
 };
 
 export { useStartGameScreen };
