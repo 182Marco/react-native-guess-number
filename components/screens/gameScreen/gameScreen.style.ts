@@ -17,11 +17,6 @@ const S = StyleSheet.create({
     gap: 30,
     justifyContent: 'center',
   },
-  SummaryText: {
-    color: Gs.colors.secondary,
-    marginBottom: 0,
-    marginTop: 0,
-  },
 });
 
 export { S };
