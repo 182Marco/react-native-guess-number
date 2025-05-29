@@ -18,8 +18,8 @@ const texts = {
   pcLossAlertParamsDescription: 'You took 3 shots without guessing',
   gameOverScreenTitle: 'Game Over Screen',
   gameScreenSummary: {
-    part1: 'At round number ',
-    part2: ' the PC guessed with the number: ',
+    part1: 'Round number ',
+    part2: ' PC guess: ',
   },
   gameOverSummary: {
     part1: 'Your phone needed ',
