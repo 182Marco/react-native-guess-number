@@ -7,6 +7,7 @@ const useStyles = () => {
   const IsLandskape = height < 380;
 
   return StyleSheet.create({
+    scrollView: { flex: 1 },
     screen: {
       flex: 1,
       marginTop: IsLandskape ? 22 : 60,
