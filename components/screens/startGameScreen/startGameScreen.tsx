@@ -8,7 +8,7 @@ import { IStartGameScreen } from './startGameScreen.models';
 const StartGameScreen: IStartGameScreen = p => {
   const { S, ...h } = useStartGameScreen(p);
   return (
-    <N.View style={S.screen}>
+    <N.KeyboardAvoidingView style={S.screen}>
       <C.Title text={texts.startGameTitle} />
       <N.View style={S.inputBox}>
         <N.Text style={S.inputExplain}>{texts.startGameInputExplain}</N.Text>
@@ -32,7 +32,7 @@ const StartGameScreen: IStartGameScreen = p => {
           />
         </N.View>
       </N.View>
-    </N.View>
+    </N.KeyboardAvoidingView>
   );
 };
 
