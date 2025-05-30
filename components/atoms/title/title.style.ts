@@ -1,14 +1,16 @@
-import { StyleSheet } from 'react-native';
+import * as N from 'react-native';
+import * as U from '@/utils';
 import * as Gs from '@/styles';
-import { ITitleStyle } from './title.model';
 
-const S = StyleSheet.create({
+const isAndroid = N.Platform.OS === U.IPlatform?.android;
+
+const S = N.StyleSheet.create({
   title: {
-    fontWeight: 'bold',
+    fontWeight: isAndroid ? '400' : 'bold',
     fontSize: 24,
     color: Gs.colors.textColor,
     textAlign: 'center',
-    borderWidth: 2,
+    borderWidth: N.Platform.select({ android: 2, ios: 0 }), // 2 ways
     borderColor: Gs.colors.textColor,
     padding: 12,
   },
