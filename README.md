@@ -1,71 +1,40 @@
-# Welcome to your Todo App 👋
+# 🎯 Guess Number App
 
-## Get started
+Welcome to **Guess Number**, a simple yet functional mobile game built with **React Native**. This project represents my **second learning playground** after developing a basic **To-Do App**, and it focuses primarily on exploring the core features and capabilities of React Native.
 
-1. Install dependencies
+## 📱 About the App
 
-   ```bash
-   npm install
-   ```
+The game itself is intentionally **basic**—the user tries to guess a number chosen by the app. While the gameplay is minimal, the project serves as a **technical exploration** rather than a polished product.
 
-2. Start the app
+> ⚠️ The UI is intentionally rough and minimalistic, as the main goal was to dive deep into the framework's features rather than design.
 
-   ```bash
-   npx expo start
-   ```
+## 🧠 Why This Project Matters
 
-In the output, you'll find options to open the app in a
+Despite its simplicity, the app is built with **clean and scalable code architecture** in mind:
 
-- development build
-- Android emulator
-- iOS simulator
-- Expo Go, a limited sandbox for trying out app development with Expo
+- 🧩 **Modular Components**: Each component is split into separate files for:
+  - Logic
+  - TypeScript models
+  - Templates (JSX)
+  - Styles
+  - Utility functions
 
-You can start developing by editing the files inside the **app** directory. This project uses file-based routing.
+- 🧱 **Enum Usage**: All static variables used in the logic are grouped into `enum` structures to avoid typos and follow best practices.
 
-## Get a fresh project
+- 🧼 **Clean Code Standards**: I take pride in maintaining a clean and maintainable codebase. This structure is not only ideal for learning but also **translatable to enterprise-level development**, where:
+  - Maintenance becomes faster
+  - Scalability is easier
+  - Costs are reduced
+  - Revenue potential is maximized
 
-When you're ready, run:
+- 🧠 **Pragmatic Destructuring**: Destructuring is used **only when it helps reduce code verbosity**, not as a stylistic choice. I avoid destructuring dozens of properties from an object just for the sake of it, especially when it leads to code duplication or reduced clarity.
 
-```bash
-npm run reset-project
-```
+## 🚀 Tech Stack
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- React Native
+- TypeScript
+- Custom styling (no UI libraries)
+- Functional components and hooks
 
-# Todo App
+## 📂 Project Structure
 
-Welcome to the **Todo App** repository! This project is a simple yet functional todo application built with TypeScript. It allows users to check off completed todos, remove them, and includes error checks for empty strings or duplicate todos.
-
-## Description
-
-This project is designed to provide a clean and efficient todo list application. It features:
-
-- **Atomic Button Component**: A reusable button component.
-- **Three Main Components**: The core components of the app.
-- **Modal Component**: For additional functionality.
-- **Error Checks**: Ensuring no empty strings or duplicate todos are added.
-
-The project structure is organized to maximize clarity and cleanliness in the code. The logic is separated from the template, and styles are managed independently.
-
-## Project Structure
-
-- **App.tsx**: The main entry point where the app starts.
-- **/components**: Folder containing reusable components, including the atomic button.
-- **/screens**: Folder with the main screens of the app.
-- **/modals**: Folder containing modal components.
-- **/styles**: Styles for the app, separated from the logic.
-- **/utils**: Utility functions for error checking and other logic.
-- **Barrel Import Technique**: Used to export components efficiently.
-
-## How to Get Started
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/todo-app.git
-   ```
-
----
-
-Feel free to ask if you need any more changes or additional information!
